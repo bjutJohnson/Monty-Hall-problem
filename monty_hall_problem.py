@@ -36,7 +36,6 @@ def generateBox(index):
 
 
 # 模拟我的行为，从用户的选择之外的两个盒子中选择一个装苹果的盒子打开告知用户
-
 # 返回打开的盒子的编号
 def simulateMyBehavior(userSelectIndex, iphone7Index):
     iRet = -1
@@ -75,9 +74,10 @@ def simulateResult(num):
         openBoxIndex = simulateMyBehavior(userSelectIndex, iPhone7Index)
 
 
-        # 如果用户始终坚持最开始的选择，
+        # 如果用户始终坚持最开始的选择
         if userSelectIndex == iPhone7Index:
             oneSelectSuccess = oneSelectSuccess + 1
+        # 如果用户改变选择，实际上是二选一，因此else语句必然应对的是改变选择的情况
         else:
             twoSelectSuccess = twoSelectSuccess + 1
 
